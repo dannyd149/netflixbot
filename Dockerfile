@@ -10,6 +10,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install -r requirements.txt
-RUN playwright install && playwright install-deps
+RUN playwright install chromium
+RUN playwright install-deps
 
 CMD ["python", "netflix_code_bot.py"]
