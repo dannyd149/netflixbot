@@ -1,8 +1,7 @@
---only-binary=greenlet
-greenlet>=3.0.0
 python-telegram-bot==20.6
 google-api-python-client==2.85.0
 google-auth-oauthlib==1.0.0
 playwright==1.39.0
 beautifulsoup4==4.12.2
 python-dotenv==1.0.0
+greenlet==3.0.0  # Exact version playwright needs
