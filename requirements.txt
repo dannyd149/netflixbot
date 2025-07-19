@@ -1,7 +1,7 @@
-greenlet
+python-telegram-bot==20.6
 playwright
 beautifulsoup4
 google-api-python-client
 google-auth
 google-auth-oauthlib
-python-telegram-bot==20.0b0
+greenlet==3.0.1
