@@ -1,7 +1,6 @@
 python-telegram-bot==20.6
-google-auth-oauthlib==1.0.0
 google-api-python-client==2.85.0
-beautifulsoup4==4.12.2
+google-auth-oauthlib==1.0.0
 playwright==1.39.0
-requests==2.31.0
+beautifulsoup4==4.12.2
 python-dotenv==1.0.0
