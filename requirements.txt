@@ -1,5 +1,5 @@
-python-telegram-bot==13.15
-imapclient
-beautifulsoup4
-playwright
 requests
+playwright
+google-api-python-client
+google-auth
+google-auth-oauthlib
