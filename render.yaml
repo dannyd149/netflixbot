@@ -4,3 +4,5 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: "python netflix_code_bot.py"
