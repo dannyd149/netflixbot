@@ -1,14 +1,15 @@
-FROM python:3.10
+FROM python:3.12-slim
 
 WORKDIR /app
 COPY . .
 
-# Install dependencies
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN apt-get update && \
+    apt-get install -y \
+    gcc \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install Playwright and its dependencies
-RUN apt-get update && apt-get install -y libnss3 libatk-bridge2.0-0 libxss1 libgtk-3-0 libasound2
-RUN playwright install --with-deps
+RUN pip install -r requirements.txt
+RUN playwright install && playwright install-deps
 
 CMD ["python", "netflix_code_bot.py"]
