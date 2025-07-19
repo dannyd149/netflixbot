@@ -1,10 +1,7 @@
 python-telegram-bot==20.6
-requests
-bs4
-google-auth
-google-auth-oauthlib
-google-api-python-client
-google-auth-httplib2
-APScheduler
-imapclient
-playwright
+google-auth-oauthlib==1.0.0
+google-api-python-client==2.85.0
+beautifulsoup4==4.12.2
+playwright==1.39.0
+requests==2.31.0
+python-dotenv==1.0.0
