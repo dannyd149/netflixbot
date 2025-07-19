@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: netflix-code-bot
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install
+    startCommand: python netflix_code_bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8067606353:AAFuzO4D61SYBXhnSUZGdvGjr_RXfixuy5M
