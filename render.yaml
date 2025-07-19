@@ -1,10 +1,12 @@
+build:
+  dockerfilePath: Dockerfile
+
 services:
   - type: web
-    name: netflixbot
-    runtime: python
-    pythonVersion: 3.11.9
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python netflix_code_bot.py"
+    name: netflix-code-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python netflix_code_bot.py
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         fromDotEnv: true
