@@ -1,9 +1,16 @@
 services:
   - type: web
     name: netflixbot
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python netflix_code_bot.py
+    runtime: python
+    pythonVersion: 3.11.9
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python netflix_code_bot.py"
     envVars:
-      - fromEnvVar: TELEGRAM_BOT_TOKEN
-    autoDeploy: true
+      - key: TELEGRAM_BOT_TOKEN
+        fromDotEnv: true
+      - key: EMAIL_ADDRESS
+        fromDotEnv: true
+      - key: EMAIL_PASSWORD
+        fromDotEnv: true
+      - key: ADMIN_ID
+        fromDotEnv: true
