@@ -1,16 +1,9 @@
-# Use official Python 3.10 base image
 FROM python:3.10-slim
 
-# Set working directory
 WORKDIR /app
-
-# Install dependencies
-COPY requirements.txt .
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy app files
 COPY . .
 
-# Start the bot
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
 CMD ["python", "netflix_code_bot.py"]
